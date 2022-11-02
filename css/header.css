@@ -1,0 +1,99 @@
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+.header {
+  position: fixed;
+  margin-top: 10px;
+}
+.header .container_header {
+  max-width: 1280px;
+  margin-right: auto;
+  margin-left: auto;
+  width: 100%;
+}
+.header .container_header .navbar1 {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 19px;
+}
+.header .container_header .navbar1 .container-navbar1 {
+  height: 50px;
+  background-color: black;
+}
+.header .container_header .navbar1 .container-navbar1 .content-navbar1 {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+.header .container_header .navbar1 .container-navbar1 .content-navbar1 .logo-company .logoImage {
+  position: absolute;
+  width: 116px;
+  height: 32px;
+  left: 24px;
+  right: 0;
+  top: 10px;
+  bottom: 8px;
+}
+.header .container_header .navbar1 .container-navbar1 .content-navbar1 .loginRegister {
+  display: flex;
+  justify-content: center;
+}
+.header .container_header .navbar1 .container-navbar1 .content-navbar1 .loginRegister a {
+  text-decoration: none !important;
+  color: #F6F6F6;
+  border: 1px solid #000000;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  width: 90px;
+  height: 32px;
+  top: 15px;
+}
+.header .container_header .navbar1 .container-navbar1 .content-navbar1 .loginRegister .imageCart {
+  position: absolute;
+  left: 1027px;
+  right: 222px;
+  top: 9px;
+  bottom: 10px;
+}
+.header .container_header .navbar1 .container-navbar1 .content-navbar1 .loginRegister .numberProductIncart {
+  position: absolute;
+  left: 1058px;
+  right: 187px;
+  top: 6px;
+  bottom: 8px;
+  weight: 35px;
+  height: 36px;
+  color: #FFFFFF;
+  font-size: 16px;
+  line-height: 19px;
+}
+.header .container_header .navbar1 .container-navbar1 .content-navbar1 .loginRegister .gotoLogin {
+  position: absolute;
+  left: 1103px !important;
+}
+.header .container_header .navbar1 .container-navbar1 .content-navbar1 .loginRegister .gotoRegister {
+  position: absolute;
+  left: 1170px !important;
+}
+.header .container_header .navbar {
+  background-color: #F5F5F5 !important;
+}
+.header .container_header .navbar .container-fluid .navbar-nav {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400px;
+  font-size: 20px;
+  line-height: 24px;
+  color: #000000;
+}
+.header .container_header .navbar .container-fluid .navbar-nav .nav-link {
+  left: 25px;
+  right: 25px;
+  top: 16px;
+  bottom: 10px;
+}

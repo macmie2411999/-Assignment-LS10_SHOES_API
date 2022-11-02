@@ -1,0 +1,180 @@
+// Base
+@import '../scss/_base.scss';
+
+// Header and Footer Style
+@import '../scss/header.scss';
+@import '../scss/footer.scss';
+
+@mixin fontMain {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 19px;
+}
+
+@mixin fontAdjust ($weight, $size, $height) {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: $weight;
+    font-size: $size;
+    line-height: $height;
+}
+
+@mixin inlineBlocks() {
+    display: flex;
+    justify-content: center;
+}
+
+@mixin handleURL() {
+    a {
+        text-decoration: none !important;
+        color: #F6F6F6;
+        border: 1px solid #000000;
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+        width: 90px;
+        height: 32px;
+        top: 15px;
+    }
+}
+
+@mixin leftRightTopBottom($left, $right, $top, $bottom) {
+    left: $left;
+    right: $right;
+    top: $top;
+    bottom: $bottom;
+}
+
+// Main Style
+.main_register {
+    max-width: 1280px;
+    margin: 170px auto 50px auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .container_register {
+        @include fontMain();
+        max-width: 700px;
+        width: 100%;
+        // background-color: rgb(255,252,252);
+        padding: 25px 30px;
+        border-radius: 5px;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+
+
+        .title_register {
+            font-size: 25px;
+            font-weight: 500;
+            position: relative;
+            display: flex;
+            justify-content: center;
+        }
+
+        .content_register {
+            form {
+                .user-details {
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+                    margin: 20px 0 12px 0;
+
+                    .input-box {
+                        margin-bottom: 15px;
+                        width: calc(100% / 2 - 20px);
+
+                        span {
+                            display: block;
+                            margin-bottom: 5px;
+                            @include fontAdjust(350, 20, 30px);
+                        }
+
+                        input {
+                            height: 45px;
+                            width: 100%;
+                            outline: none;
+                            border-radius: 5px;
+                            padding-left: 15px;
+                            border: 1px solid #ccc;
+                            border-bottom-width: 2px;
+                            transition: all 0.3s ease;
+                        }
+
+                        intput:focus,
+                        intput:valid {
+                            border-color: #9b59b6;
+                        }
+                    }
+                }
+
+                .gender-details {
+
+                    // @include inlineBlocks();
+                    .gender-title {
+                        @include fontAdjust(350, 20, 30px);
+                    }
+
+                    #dot-1:checked~.category label .one,
+                    #dot-2:checked~.category label .two {
+                        background: #9b59b6;
+                        border-color: #d9d9d9;
+                    }
+                }
+
+                .category {
+                    display: flex;
+                    width: 80%;
+                    margin: 14px 0;
+                    justify-content: space-between;
+
+                    label {
+                        display: flex;
+                        align-items: center;
+                        cursor: pointer;
+
+                        .dot {
+                            height: 18px;
+                            width: 18px;
+                            border-radius: 50%;
+                            margin-right: 10px;
+                            background: #d9d9d9;
+                            border: 5px solid transparent;
+                            transition: all 0.3s ease;
+                        }
+                    }
+                }
+
+                input[type="radio"] {
+                    display: none;
+                }
+
+                .button {
+                    height: 45px;
+                    margin: 35px 0;
+
+                    input {
+                        height: 100%;
+                        width: 100%;
+                        border-radius: 5px;
+                        border: none;
+                        color: #fff;
+                        font-size: 18px;
+                        font-weight: 500;
+                        letter-spacing: 1px;
+                        cursor: pointer;
+                        transition: all 0.3s ease;
+                        background: linear-gradient(135deg, #71b7e6, #9b59b6);
+                    }
+
+                    input:hover {
+                        background: linear-gradient(-135deg, #71b7e6, #9b59b6);
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Main Style End

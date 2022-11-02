@@ -1,0 +1,126 @@
+// Base
+@import '../scss/_base.scss';
+
+@mixin fontMain {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 19px;
+}
+
+@mixin fontAdjust ($weight, $size, $height) {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: $weight;
+    font-size: $size;
+    line-height: $height;
+}
+
+@mixin inlineBlocks() {
+    display: flex;
+    justify-content: center;
+}
+
+@mixin handleURL() {
+    a {
+        text-decoration: none !important;
+        color: #F6F6F6;
+        border: 1px solid #000000;
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+        width: 90px;
+        height: 32px;
+        top: 15px;
+    }
+}
+
+@mixin leftRightTopBottom($left, $right, $top, $bottom) {
+    left: $left;
+    right: $right;
+    top: $top;
+    bottom: $bottom;
+}
+
+// Header Style
+.header {
+    position: fixed;
+    margin-top: 10px;
+
+    .container_header {
+        max-width: 1280px;
+        margin-right: auto;
+        margin-left: auto;
+        width: 100%;
+
+        .navbar1 {
+            @include fontMain();
+
+            .container-navbar1 {
+                height: 50px;
+                background-color: black;
+
+                .content-navbar1 {
+                    @include inlineBlocks();
+                    position: relative;
+
+                    .logo-company {
+                        .logoImage {
+                            position: absolute;
+                            width: 116px;
+                            height: 32px;
+                            @include leftRightTopBottom(24px, 0, 10px, 8px);
+                        }
+                    }
+
+                    .loginRegister {
+
+                        @include handleURL();
+                        @include inlineBlocks();
+
+                        .imageCart {
+                            position: absolute;
+                            @include leftRightTopBottom(1027px, 222px, 9px, 10px);
+                        }
+
+                        .numberProductIncart {
+                            position: absolute;
+                            @include leftRightTopBottom(1058px, 187px, 6px, 8px);
+                            weight: 35px;
+                            height: 36px;
+                            color: #FFFFFF;
+                            font-size: 16px;
+                            line-height: 19px;
+                        }
+
+                        .gotoLogin {
+                            position: absolute;
+                            left: 1103px !important;
+                        }
+
+                        .gotoRegister {
+                            position: absolute;
+                            left: 1170px !important;
+                        }
+                    }
+                }
+            }
+        }
+
+        .navbar {
+            background-color: #F5F5F5 !important;
+
+            .container-fluid {
+                .navbar-nav {
+                    @include fontAdjust(400px, 20px, 24px);
+                    color: #000000;
+
+                    .nav-link {
+                        @include leftRightTopBottom(25px, 25px, 16px, 10px)
+                    }
+                }
+            }
+        }
+    }
+}
+// Header Style End

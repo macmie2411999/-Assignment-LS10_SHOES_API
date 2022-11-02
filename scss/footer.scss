@@ -1,0 +1,77 @@
+// Base
+@import '../scss/_base.scss';
+
+@mixin fontMain {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 19px;
+}
+
+@mixin fontAdjust ($weight, $size, $height) {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: $weight;
+    font-size: $size;
+    line-height: $height;
+}
+
+@mixin inlineBlocks() {
+    display: flex;
+    justify-content: center;
+}
+
+@mixin handleURL() {
+    a {
+        text-decoration: none !important;
+        color: #c11b1b;
+
+        width: 90px;
+        height: 32px;
+        top: 15px;
+    }
+}
+
+@mixin leftRightTopBottom($left, $right, $top, $bottom) {
+    left: $left;
+    right: $right;
+    top: $top;
+    bottom: $bottom;
+}
+
+// Footer Style
+.footer {
+    @include fontMain();
+    .footer_embrace {
+        max-width: 1280px;
+        margin-right: auto;
+        margin-left: auto;
+        
+        width: 100%;
+        height: 242px;
+
+        .footer_container {
+            h6{
+                font-weight: bold;
+                font-size: 20px;
+            }
+
+            @include handleURL();
+
+            .first_row {
+                background-color: rgb(250,250,250);
+                padding-top: 30px;
+                padding-bottom: 30px;
+            }
+
+            .second_row {
+                background-color: rgb(236,236,236);
+                padding-top: 30px;
+                padding-bottom: 30px;
+            }
+        }
+    }
+}
+
+// Footer Style End
