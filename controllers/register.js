@@ -36,7 +36,12 @@ document.querySelector('#buttonSubmit').onclick = function () {
     callAPIRegister(JSON.stringify(newUser), "alert-register");
 }
 
-// Call API
+/**
+ * This function is used to call api and return to server infor of user registered
+ * and handle affairs after registering
+ * @param {*} returnData Data sent to server
+ * @param {*} alertId Show message success
+ */
 function callAPIRegister(returnData,alertId) {
     let promise = axios({
             url: 'https://shop.cyberlearn.vn/api/Users/signup',
@@ -47,7 +52,7 @@ function callAPIRegister(returnData,alertId) {
             },
         })
         .then(function (response) {
-            //handle success
+            // Handle success
             console.log(response);
 
             document.getElementById(alertId).style.display = 'block';
@@ -56,19 +61,19 @@ function callAPIRegister(returnData,alertId) {
             document.getElementById(alertId).innerHTML = `Register successfully!`;
         })
         .catch(function (response) {
-            //handle error
+            // Handle error
             console.log(response);
         });
 };
 
-function getInforRegister() {
-    let userFullName = removeVietnameseTones(document.querySelector('#userFullName').value);
-    let userEmail = removeVietnameseTones(document.querySelector('#userEmail').value);
-    let userPhoneNumber = removeVietnameseTones(document.querySelector('#userPhoneNumber').value);
-    let userPassword = removeVietnameseTones(document.querySelector('#userPassword').value);
-    let userConfirmPassword = removeVietnameseTones(document.querySelector('#userConfirmPassword').value);
-    let userGender = $('input[type="radio"][name="gender"]:checked').val();
-};
+// function getInforRegister() {
+//     let userFullName = removeVietnameseTones(document.querySelector('#userFullName').value);
+//     let userEmail = removeVietnameseTones(document.querySelector('#userEmail').value);
+//     let userPhoneNumber = removeVietnameseTones(document.querySelector('#userPhoneNumber').value);
+//     let userPassword = removeVietnameseTones(document.querySelector('#userPassword').value);
+//     let userConfirmPassword = removeVietnameseTones(document.querySelector('#userConfirmPassword').value);
+//     let userGender = $('input[type="radio"][name="gender"]:checked').val();
+// };
 
 /**
  * Check if password is valid
