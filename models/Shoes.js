@@ -1,17 +1,17 @@
-export class Shoes{
-    idShoes = '';
-    nameShoes = '';
-    aliasShoes = '';
-    priceShoes = '';
-    descriptionShoes = '';
-    sizeShoes = '';
-    shortDescriptionShoes = '';
-    quantityShoes = '';
-    deletedShoes = '';
-    categoriesShoes = '';
-    relatedProductsShoes = '';
-    featureShoes = '';
-    imageShoes = '';
+export class Shoes  {
+    id = '';
+    name = '';
+    alias  = '';
+    price  = '';
+    description  = '';
+    size = '';
+    shortDescription = '';
+    quantity = '';
+    deleted = '';
+    categories  = '';
+    relatedProducts  = '';
+    feature = '';
+    image = '';
     
     hienThiThongTin(){
         console.log('Ma Hoc Vien',this.maHV);
