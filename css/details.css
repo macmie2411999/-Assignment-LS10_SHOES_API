@@ -147,61 +147,115 @@ body {
   padding-bottom: 30px;
 }
 
-.main_carousel {
+.main-product-detail {
   max-width: 1280px;
-  margin: 170px auto 50px auto;
+  margin: 168px auto 50px auto;
   width: 100%;
-  height: 405px;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url(../images/imageCarousel.png);
-  position: relative;
 }
-.main_carousel .container_carousel {
+.main-product-detail .container-detail {
   width: 100%;
+  margin-left: 65px;
 }
-.main_carousel .container_carousel #carouselExampleControls .carousel-inner .carousel-item img {
-  margin: 30px 373px 86px 133px !important;
+.main-product-detail .container-detail .row .image-container {
+  width: 334px !important;
+  height: 355px !important;
+  left: 65px;
+  top: 58px;
+  background: #F8F8F8;
 }
-.main_carousel .container_carousel #carouselExampleControls .carousel-inner .carousel-item .card_home .card {
-  height: 152px;
-  width: 400px;
-  margin: -490px 59px 355px 800px !important;
-  background-color: transparent !important;
-  border: transparent !important;
+.main-product-detail .container-detail .row .image-container .shoes-image {
+  margin-left: -100px;
+  margin-top: -45px;
+  scale: 0.6;
 }
-.main_carousel .container_carousel #carouselExampleControls .carousel-inner .carousel-item .card_home .card .card-body .card-title {
+.main-product-detail .container-detail .row .product-information {
+  margin-left: 127px;
+}
+.main-product-detail .container-detail .row .product-information .product-information-container .product-name {
   font-family: "Inter";
   font-style: normal;
   font-weight: 300;
-  font-size: 40px;
-  line-height: 48px;
+  font-size: 30px;
+  line-height: 36px;
   color: #000;
 }
-.main_carousel .container_carousel #carouselExampleControls .carousel-inner .carousel-item .card_home .card .card-body .card-text {
+.main-product-detail .container-detail .row .product-information .product-information-container p {
+  width: 503px;
+  height: 40px;
   font-family: "Inter";
   font-style: normal;
-  font-weight: 300;
-  font-size: 20px;
-  line-height: 24px;
-  color: #000;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #140101;
+  margin-top: 10px;
 }
-.main_carousel .container_carousel #carouselExampleControls .carousel-inner .carousel-item .card_home .card .card-body button {
-  background-color: #F8B653;
-  width: 150px;
+.main-product-detail .container-detail .row .product-information .product-information-container .product-size span {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  color: #1ED90E;
+  margin-top: 5px;
+}
+.main-product-detail .container-detail .row .product-information .product-information-container .product-size .size-list .button-size {
+  width: 50px;
+  height: 50px;
+  margin-top: 10px;
+  background: #CCCCCC;
+  border: transparent;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 29px;
+  color: #1E1D1D;
+}
+.main-product-detail .container-detail .row .product-information .product-information-container .product-price {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 36px;
+  color: #FC0303;
+  margin-top: 17px;
+}
+.main-product-detail .container-detail .row .product-information .product-information-container .product-count .quantity-product .count-button {
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(180deg, #6181F3 0%, #7C97F5 99.48%);
+  border-radius: 3px;
+  border: transparent;
+  margin-top: 6px;
+}
+.main-product-detail .container-detail .row .product-information .product-information-container .product-count .quantity-product .input-quantity {
+  width: 50px;
   height: 50px;
   border: transparent;
+  text-align: center;
 }
-.main_carousel .container_carousel #carouselExampleControls .carousel-inner .carousel-item .card_home .card .card-body button a {
+.main-product-detail .container-detail .row .product-information .product-information-container .product-count .button-to-cart {
+  width: 175px;
+  height: 64px;
+  background: linear-gradient(270deg, rgba(62, 32, 248, 0.9) 5.14%, #D017EE 89.71%);
+  margin-top: 7px;
+  border-radius: 3px;
+  border: transparent;
+}
+.main-product-detail .container-detail .row .product-information .product-information-container .product-count .button-to-cart a {
+  text-decoration: none;
   font-family: "Inter";
   font-style: normal;
-  font-weight: 300;
-  font-size: 20px;
-  line-height: 24px;
-  text-decoration: none;
-  color: #FFF;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  color: #FFF8F8;
 }
+
 .main_products {
   max-width: 1280px;
   margin: 50px auto 50px auto;

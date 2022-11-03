@@ -63,7 +63,7 @@ function renderShoesToCarousel(arrayShoes) {
                                 <div class="card-body">
                                     <h5 class="card-title">${shoes.name}</h5>
                                     <p class="card-text">${shoes.description}</p>
-                                    <button href="#" class="btn btn-primary"><a>Buy now</a></button>
+                                    <button class="btn btn-primary"><a href="../detail.html?idShoes=${shoes.id}">Buy now</a></button>
                                 </div>
                             </div>
                         </div>
@@ -79,7 +79,7 @@ function renderShoesToCarousel(arrayShoes) {
                                 <div class="card-body">
                                     <h5 class="card-title">${shoes.name}</h5>
                                     <p class="card-text">${shoes.description}</p>
-                                    <button href="" class="btn btn-primary"><a>Buy now</a></button>
+                                    <button class="btn btn-primary"><a href="../detail.html?idShoes=${shoes.id}">Buy now</a></button>
                                 </div>
                             </div>
                         </div>
@@ -102,7 +102,7 @@ function renderShoesToProductFeature(arrayShoes) {
                 <p class="card-text">${shoes.shortDescription}</p>
             </div>
             <div class="card-footer">
-                <button class="button-buy-now"> <a>Buy now</a></button>
+                <button class="button-buy-now"> <a href="../detail.html?idShoes=${shoes.id}">Buy now</a></button>
                 <button class="tag-price">${shoes.price}</button>
             </div>
         </div>
