@@ -6,14 +6,14 @@ Project realizes functions calling APIs <br>
 ## LINK DEMO
 <div align="center">
 
-[Click vào đây để xem chi tiết](https://corvisionv6.surge.sh/)
+[Click vào đây để xem chi tiết](https://cybershoesmm.surge.sh/)
 
 </div>
 
 ## VIDEO DEMO
 <div align="center">
 
-[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/wXwULGS4HiQ/0.jpg)](https://youtu.be/wXwULGS4HiQ)
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/7p1Bkl-flxo/0.jpg)](https://youtu.be/7p1Bkl-flxo)
 
 </div>
 
@@ -24,6 +24,7 @@ Project realizes functions calling APIs <br>
 
 ## THÀNH VIÊN
 Nhóm gồm 1 thành viên: Cao Đức Mạnh (MacMie) <br>
+
 ## BASE
 ```scss
 // Base 
