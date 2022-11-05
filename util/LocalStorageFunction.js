@@ -5,7 +5,7 @@ var customLocalStorage = {
      * @param {*} arrayProvided An Array
      * @param {*} nameArrayProvided Set a name for the array
      */
-    saveArrayToLocalStorage: function (arrayProvided, nameArrayProvided ) {
+    saveArrayToLocalStorage: function (arrayProvided, nameArrayProvided) {
         // Stringify provided array (to String)
         var stringArrayProvided = JSON.stringify(arrayProvided);
 

@@ -9,10 +9,9 @@ let token_cybersoft = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0ZW5Mb3AiOiJGcm9u
 let valid = true;
 
 
-// Set event for button Add-Todo-Task
+// Set event for button Submit
 document.querySelector('#buttonSubmit').onclick = function () {
     // Get the input
-    // console.log("clicked");
     let userFullName = document.querySelector('#userFullName').value;
     let userEmail = document.querySelector('#userEmail').value;
     let userPhoneNumber = document.querySelector('#userPhoneNumber').value;
@@ -42,7 +41,7 @@ document.querySelector('#buttonSubmit').onclick = function () {
  * @param {*} returnData Data sent to server
  * @param {*} alertId Show message success
  */
-function callAPIRegister(returnData,alertId) {
+function callAPIRegister(returnData, alertId) {
     let promise = axios({
             url: 'https://shop.cyberlearn.vn/api/Users/signup',
             method: 'POST',
@@ -52,28 +51,18 @@ function callAPIRegister(returnData,alertId) {
             },
         })
         .then(function (response) {
-            // Handle success
+            // Handle if successfully return data
             console.log(response);
 
             document.getElementById(alertId).style.display = 'block';
             document.getElementById("buttonSubmit").style.display = 'none';
-            // document.getElementById("buttonSubmit").disabled = true;
             document.getElementById(alertId).innerHTML = `Register successfully!`;
         })
         .catch(function (response) {
-            // Handle error
+            // Handle if failed
             console.log(response);
         });
 };
-
-// function getInforRegister() {
-//     let userFullName = removeVietnameseTones(document.querySelector('#userFullName').value);
-//     let userEmail = removeVietnameseTones(document.querySelector('#userEmail').value);
-//     let userPhoneNumber = removeVietnameseTones(document.querySelector('#userPhoneNumber').value);
-//     let userPassword = removeVietnameseTones(document.querySelector('#userPassword').value);
-//     let userConfirmPassword = removeVietnameseTones(document.querySelector('#userConfirmPassword').value);
-//     let userGender = $('input[type="radio"][name="gender"]:checked').val();
-// };
 
 /**
  * Check if password is valid
@@ -96,7 +85,6 @@ function checkPassword(password, confirmPassword, errId) {
     document.getElementById(errId).style.display = 'none';
     return true;
 }
-
 
 /**
  * This function remove all the Vietnamese Tones

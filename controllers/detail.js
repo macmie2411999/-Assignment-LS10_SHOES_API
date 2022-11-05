@@ -1,5 +1,6 @@
 // -by MacMie
 
+// Set some global variables
 let token_cybersoft = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0ZW5Mb3AiOiJGcm9udGVuZCA3MyIsIkhldEhhblN0cmluZyI6IjIzLzA1LzIwMjMiLCJIZXRIYW5UaW1lIjoiMTY4NDgwMDAwMDAwMCIsIm5iZiI6MTY1OTg5MTYwMCwiZXhwIjoxNjg0OTQ3NjAwfQ.u471oZWr9EMgIb7oeyuaxfi8spgAgUuTkUHYSS9pBWg";
 let valid = true;
 
@@ -15,17 +16,22 @@ let valid = true;
     })
 
     promise.then(function (res) {
+        // Handle if successfully get data
         let choosenShoes = res.data.content;
         console.log(choosenShoes);
         
+        // Render products array to layout
         renderShoesToDetailProduct(choosenShoes, renderShoesSize(choosenShoes.size));
         renderShoesToProductFeature(choosenShoes.relatedProducts);
     })
 
     promise.catch(function (err) {
+        // Handle if failed
         console.log(err);
     })
 })();
+
+// Functions handle Events
 
 function addToCart () {
     let productInCart = parseInt(document.querySelector('.numberProductIncart').innerHTML);
@@ -34,16 +40,14 @@ function addToCart () {
     document.querySelector('.numberProductIncart').innerHTML = productInCart + inputQuantities;
 }
 
-// Functions handle Events
-
 function addProduct(){
-    console.log("addProduct clicked");
+    // console.log("addProduct clicked");
     let inputQuantities = parseInt(document.querySelector('.input-quantity').value);
     document.querySelector('.input-quantity').value = inputQuantities + 1;
 }
 
 function removeProduct(){
-    console.log("removeProduct clicked");
+    // console.log("removeProduct clicked");
     let inputQuantities = parseInt(document.querySelector('.input-quantity').value);
     if(inputQuantities > 1){
         inputQuantities -= 1;

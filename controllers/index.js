@@ -2,6 +2,7 @@
 //     Shoes
 // } from "../models/Shoes.js";
 
+// Set some global variables
 let token_cybersoft = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0ZW5Mb3AiOiJGcm9udGVuZCA3MyIsIkhldEhhblN0cmluZyI6IjIzLzA1LzIwMjMiLCJIZXRIYW5UaW1lIjoiMTY4NDgwMDAwMDAwMCIsIm5iZiI6MTY1OTg5MTYwMCwiZXhwIjoxNjg0OTQ3NjAwfQ.u471oZWr9EMgIb7oeyuaxfi8spgAgUuTkUHYSS9pBWg";
 let valid = true;
 
@@ -13,46 +14,27 @@ let valid = true;
     })
 
     promise.then(function (res) {
+        // Handle if successfully get data
         let arrayShoes = res.data.content;
-        // arrayShoes.push(res.data.content);
         console.log(arrayShoes);
+
+        // Render products array to layout
         renderShoesToCarousel(arrayShoes);
         renderShoesToProductFeature(arrayShoes);
 
     })
 
     promise.catch(function (err) {
+        // Handle if failed
         console.log(err);
     })
 })();
 
-// (async function getAllShoesApi() {
-//     // Lay link va bien ve Object
-//     var urlParams = new URLSearchParams(window.location.search);
-
-//     try {
-//         var res = await axios({
-//             url: 'https://shop.cyberlearn.vn/api/Product',
-//             method: 'GET'
-//         });
-
-//         let arrayShoes = res.data.content;
-
-//         console.log(arrayShoes);
-//         renderShoesToCarousel(arrayShoes);
-//     } catch (e) {
-//         console.log(err);
-//     }
-// })();
-
-// Chuyen link qua detail.html voi tham so maphim co gia tri la movie.maPhim
+// Functions Render HTML
 
 function renderShoesToCarousel(arrayShoes) {
-    // console.log(arrayShoes);
     let contentHTML = '';
     for (let shoes of arrayShoes) {
-        // console.log(shoes);
-
         if (shoes.id === 1) {
             contentHTML += `
             <div class="carousel-item active">
@@ -112,11 +94,21 @@ function renderShoesToProductFeature(arrayShoes) {
     document.getElementById('product_features').innerHTML = contentHTML;
 }
 
+// (async function getAllShoesApi() {
+//     // Lay link va bien ve Object
+//     var urlParams = new URLSearchParams(window.location.search);
 
-// function renderShoesToCarouselDemo(arrayShoes) {
-//     for (let shoes of arrayShoes) {
-//         document.querySelector('#image-shoes').innerHTML = shoes.image;
-//         document.querySelector('#card-title').innerHTML = shoe.name;
-//         document.querySelector('#card-text').innerHTML = shoes.description;
+//     try {
+//         var res = await axios({
+//             url: 'https://shop.cyberlearn.vn/api/Product',
+//             method: 'GET'
+//         });
+
+//         let arrayShoes = res.data.content;
+
+//         console.log(arrayShoes);
+//         renderShoesToCarousel(arrayShoes);
+//     } catch (e) {
+//         console.log(err);
 //     }
-// }
+// })();
