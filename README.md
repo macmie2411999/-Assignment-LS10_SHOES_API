@@ -1,4 +1,4 @@
-# -Assignment-LS10_SHOES_API
+# Capstone Project: SHOES CYBER
 <div align="center">
 Project realizes functions calling APIs <br>
 </div>
