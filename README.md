@@ -19,7 +19,7 @@ Project realizes functions calling APIs <br>
 
 ## HÌNH ẢNH DEMO
 <p align="center">
-<img src="https://github.com/macmie2411999/-Assignment-LS5_CorpVision_Layout/blob/91da979d9ac2623caeb322b67cfb575c69364c2f/image-preview/contact-image.png"></img>
+<img src="https://github.com/macmie2411999/-Assignment-LS10_SHOES_API/blob/0ea2c83e18aaafbac20b175006be59fd27771d22/images/imagePreview.png"></img>
 </p>
 
 ## THÀNH VIÊN
